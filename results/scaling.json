@@ -1,0 +1,65 @@
+{
+ "model": "gqa",
+ "repo": "LM_2023_Grouped_Query_Attention-pytorch",
+ "target_repo": "LM_Dec_Attention_GQA",
+ "category": "Attention",
+ "upstream": "vendored from RichardMinsooGo/LM_2023_Grouped_Query_Attention-pytorch (see LICENSE in vendor folder if present)",
+ "unified": [
+  "2 key/value heads for 8 query heads"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-11-02 11:32:08",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 260.1,
+    "ms": 22.0,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 132.8,
+    "ms": 8.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 746.1,
+    "ms": 23.5,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 415.0,
+    "ms": 8.6,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 2658.2,
+    "ms": 58.0,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 1509.0,
+    "ms": 25.9,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 4096,
+   "note": "not supported (model built for <= 2048)"
+  },
+  {
+   "len": 8192,
+   "note": "not supported (model built for <= 2048)"
+  }
+ ],
+ "seconds": 2.7
+}
